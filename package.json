@@ -1,5 +1,5 @@
 {
-  "name": "apib-merge",
+  "name": "apibmerge",
   "version": "1.0.0",
   "description": "CLI tool to merge apib and md files together",
   "main": "index.js",
