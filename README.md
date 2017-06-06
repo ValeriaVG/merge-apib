@@ -1,18 +1,33 @@
-__API-blueprint merging tool__
+API-blueprint merging tool
+==========================
 
-Simply merges *.apib* and *.md* files into one for further testing and publishing
+Simply merges *.apib* and *.md* files into one for further testing and publishing.
 
-__Installation__
-Install from npm
+Installation
+------------
+
+Install package from npm globally
+
 ````
-npm install apibmerge
+npm install -g apibmerge
 ````
-__Usage from command-line__
+
+or locally
+
+````
+npm install apibmerge --save-dev
+````
+
+Usage from command-line
+-----------------------
 ````
 apibmerge <directory> [<outputfile>]
 ````
-__Usage from script__
+Usage from script
+-----------------
+Include in your script as usial
 ````
 var apibmerge = require('apibmerge');
-apibmerge(dir,output);
+var list = apibmerge.scan(dir); // Scans folder for .md and .apib
+apibmerge.merge(list,output); // Creates one file from array of file paths
 ````
