@@ -1,8 +1,12 @@
 {
   "name": "apibmerge",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CLI tool to merge apib and md files together",
-  "main": "index.js",
+  "main": "./lib/apibmerge.js",
+  "bin":
+  {
+    "apibmerge":"./bin/apibmerge"
+  },
   "scripts": {
     "test": "./node_modules/.bin/mocha"
   },

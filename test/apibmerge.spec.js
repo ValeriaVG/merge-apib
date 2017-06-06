@@ -1,7 +1,7 @@
 var chai = require('chai');
 var should = chai.should();
 var fs = require('fs');
-var apibmerge = require('../lib/apibmerge.js');
+var apibmerge = require('./../lib/apibmerge.js');
 
 // Helper definition - should be in a shared file
 chai.use(function(_chai, utils) {
@@ -53,7 +53,7 @@ describe('Can merge files:', function() {
     var out = __dirname + '/dir/out.apib';
 
     fs.unlinkSync(out);
-    
+
     apibmerge.merge(list, out);
 
     fs.existsSync(out).should.be.unless('File "' + out + '" doesnt exist').true;

@@ -1,5 +1,7 @@
+#!/usr/bin/env node
+
 "use strict";
-var apibmerge = require('./lib/apibmerge');
+var apibmerge = require('../lib/apibmerge');
 
 var run = function(dir, output) {
   return apibmerge.merge(apibmerge.scan(dir), output);
@@ -21,5 +23,4 @@ if (process.argv.length > 2) {
 
   return process.exit();
 }
-
-module.exports = run;
+return process.exit(-1);
